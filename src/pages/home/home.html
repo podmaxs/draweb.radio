@@ -1,0 +1,17 @@
+<ion-content padding>
+  <div margin-top text-center>
+    <h1>
+      FM Vida
+    </h1>
+  </div>
+  <div margin-top text-center>
+    <button ion-button (click)="play()" clear color="light">
+        <ion-icon name="play" *ngIf="!playning" ></ion-icon>
+        <ion-icon name="pause" *ngIf="playning" ></ion-icon>
+    </button>
+  </div>
+  <ion-range min="1" max="100" color="light" step="2" [(ngModel)]="volume" (ionChange)="updateVolume()">
+     <ion-icon small range-left name="volume-mute"></ion-icon>
+     <ion-icon range-right name="volume-up"></ion-icon>
+   </ion-range>
+</ion-content>
